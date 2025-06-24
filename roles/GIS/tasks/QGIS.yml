@@ -1,5 +1,0 @@
-- name: Install QGIS (stable) via Flatpak
-  command: >
-    flatpak install -y flathub org.qgis.qgis//stable
-  args:
-    creates: /var/lib/flatpak/app/org.qgis.qgis

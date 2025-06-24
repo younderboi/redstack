@@ -1,5 +1,0 @@
-- name: Install Tor Browser via Flatpak
-  command: >
-    flatpak install -y flathub com.github.micahflee.torbrowser-launcher
-  args:
-    creates: /var/lib/flatpak/app/com.github.micahflee.torbrowser-launcher

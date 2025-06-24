@@ -8,29 +8,3 @@
       - sqlite3
     state: present
     update_cache: yes
-
-# === Install DB Enumeration Tools ===
-
-- name: Install DBeaver (GUI Database Client)
-  get_url:
-    url: "https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb"
-    dest: "/tmp/dbeaver-ce.deb"
-    mode: "0644"
-
-- name: Install DBeaver from downloaded package
-  command: dpkg -i /tmp/dbeaver-ce.deb
-  args:
-    creates: "/usr/bin/dbeaver"
-
-# === Fix any missing dependencies ===
-- name: Fix missing dependencies after DBeaver install
-  command: apt --fix-broken install -y
-
-- name: Verify DBeaver Installation
-  command: dbeaver -version
-  register: dbeaver_version
-  changed_when: false
-
-- name: Debug DBeaver Installation Status
-  debug:
-    msg: "{{ 'DBeaver installed successfully!' if dbeaver_version.rc == 0 else 'DBeaver installation failed!' }}"

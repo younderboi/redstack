@@ -16,8 +16,7 @@ Ongoing work in progress — but already operational.
 - Idempotent provisioning via Ansible
 - Minimal base install — everything is opt-in
 - Source-first tooling (wherever possible)
-- Emacs as an (optional) full-spectrum operator cockpit
-- Easily portable between cloud, VPS, and field laptops
+- Headless first
 
 ---
 
@@ -31,26 +30,6 @@ Noctua can be deployed in an infite set of ways, but here's some examples:
   - fully remote
   - no GUI tooling
   - RDP/VNC
-
-- **Thin client/server**
-  - GUI tooling on a local thin client (RPI?)
-    - Browser
-    - Secretsmanager
-    - Document reader
-    - ..
-  - Heavy tooling on remote system
-  
-- **Hybrid (personal fav)**  
-  - Tooling lives **locally**  
-  - **Network-heavy tasks** run on a remote jumpbox  
-  - Remote system acts as **opsec-forward pivot**  
-  - Tailscale mesh for comms  
-  - NFS for shared access and loot sync
-
-- **Archival/strongbox**
-  - Loot
-  - Engagement Archive
-  - Source/artifact storage
 
 - **Recon node**
   - Periodically scan and store stuff
@@ -70,15 +49,10 @@ Noctua can be deployed in an infite set of ways, but here's some examples:
 
 ## 🛠️ Planned Features
 
-- LLM + embedding for offline intel processing
 - GitLab + artifact repository
-- Automated backup/archival
-- ELK stack / lightweight SIEM
-- TAK server (Tactical Awareness Kit)
-- Android tooling (Fdroid repo, ADB workflows, side-loading stack)
+- Basic EDR/defensive implements
 
 ---
 
 **Very much WIP.**
 If you like this, feel free to reach out.
-
